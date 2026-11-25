@@ -557,6 +557,112 @@ body.focus main{padding-bottom:32px}
 .hday-t small{color:var(--ink-2);font-size:.92rem}
 .hday-go{font-weight:800;color:var(--primary);font-size:1.1rem}
 .hday.done{background:var(--primary-soft)}
+
+/* Weather card */
+.wx{gap:12px;background:linear-gradient(160deg,var(--ankle-soft),var(--surface) 70%);border-color:var(--ankle)}
+.wx-load,.wx-off{font-size:1rem;color:var(--ink-2);display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.wx-off b{color:var(--ink);font-size:1.15rem}
+.wx-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.wx-now{display:flex;align-items:center;gap:10px}
+.wx-now>div{display:flex;flex-direction:column}
+.wx-t{font-family:var(--f-display);font-weight:400;font-size:3.2rem;line-height:1}
+.wx-now span{font-size:1.05rem;font-weight:700}
+.wx-side{display:flex;flex-direction:column;gap:2px;font-size:.98rem;color:var(--ink-2)}
+.wx-side b{color:var(--ink)}
+.wx-pm{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pm{border-radius:12px;padding:8px 10px;display:flex;flex-direction:column;background:var(--surface);border:2px solid var(--line)}
+.pm span{font-size:.85rem;font-weight:700;color:var(--ink-2)}
+.pm b{font-family:var(--f-display);font-weight:400;font-size:1.35rem}
+.pm small{font-size:.75rem;color:var(--ink-2)}
+.pm.good{border-color:#3D86C6}.pm.good b{color:#3D86C6}
+.pm.ok{border-color:var(--primary)}.pm.ok b{color:var(--primary)}
+.pm.bad{border-color:var(--step)}.pm.bad b{color:var(--step)}
+.pm.worst{border-color:var(--warn)}.pm.worst b{color:var(--warn)}
+.wx-out{display:flex;flex-direction:column;gap:8px}
+.wx-out h3{font-size:1.2rem}
+.outfit{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:8px}
+.oi{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:8px 4px;font-size:.92rem;font-weight:700;color:var(--ink);line-height:1.3}
+.oi svg{color:var(--ankle)}
+.gear-h{margin:4px 0 0;font-size:1rem;color:var(--warn)}
+.outfit.gear .oi{border-color:var(--warn);background:var(--warn-soft)}
+.outfit.gear .oi svg{color:var(--warn)}
+.wx-tips{margin:0;padding-left:1.2em;font-size:1rem;line-height:1.55}
+.wx-adv{border-radius:12px;padding:10px 14px;display:flex;flex-direction:column;gap:2px}
+.wx-adv b{font-size:1.1rem}
+.wx-adv.in{background:var(--warn-soft)}.wx-adv.in b{color:var(--warn)}
+.wx-adv.out{background:var(--primary-soft)}.wx-adv.out b{color:var(--primary)}
+.wx-src{font-size:.78rem;color:var(--ink-2)}
+.city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.city-grid .seg{min-height:44px;padding:4px}
+
+/* Attendance */
+.att-row{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.att-d{display:flex;flex-direction:column;align-items:center;gap:2px}
+.att-c{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:2px dashed var(--line);font-weight:800;font-size:.9rem;color:var(--ink-2);background:var(--surface)}
+.att-d small{font-size:.72rem;color:var(--ink-2)}
+.att-d.on .att-c{border:2px solid var(--gold);background:var(--gold);color:var(--surface)}
+.att-d.gift .att-c{border-color:var(--warn);color:var(--warn);font-size:.72rem}
+.att-d.gift.on .att-c{background:var(--warn);color:var(--surface);border-color:var(--warn)}
+.att-row.big .att-c{width:42px;height:42px;font-size:1rem}
+.att-d.now .att-c{animation:stamp .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes stamp{0%{transform:scale(2.2) rotate(-20deg);opacity:0}100%{transform:none;opacity:1}}
+.att-badge{font-size:.85rem;font-weight:800;border-radius:999px;padding:2px 10px;background:var(--gold-soft);color:var(--gold)}
+.att-modal{display:flex;flex-direction:column;gap:12px;text-align:center;align-items:stretch}
+
+/* Attendance calendar */
+.cal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cal-stats>div{background:var(--surface-2);border-radius:12px;padding:8px 12px;display:flex;flex-direction:column}
+.cal-stats span{font-size:.88rem;font-weight:700;color:var(--ink-2)}
+.cal-stats b{font-family:var(--f-display);font-weight:400;font-size:1.7rem;line-height:1.15;font-variant-numeric:tabular-nums}
+.cal-stats small{font-family:var(--f-body);font-size:.9rem;color:var(--ink-2);margin-left:2px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cal-head b{font-family:var(--f-display);font-weight:400;font-size:1.4rem}
+.cal-nav{width:48px;height:44px;border-radius:12px;border:2px solid var(--line);background:var(--surface);font-size:1.6rem;line-height:1;cursor:pointer;color:var(--ink)}
+.cal-nav[disabled]{opacity:.3;cursor:default}
+.cal-sum{display:flex;gap:14px;font-size:.98rem;color:var(--ink-2)}
+.cal-sum b{color:var(--ink);font-size:1.1rem}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-w{text-align:center;font-size:.85rem;font-weight:800;color:var(--ink-2);padding:2px 0}
+.cal-w.sun,.cal-c.sun .cal-n{color:var(--warn)}.cal-w.sat,.cal-c.sat .cal-n{color:var(--ankle)}
+.cal-c{position:relative;aspect-ratio:1/1.05;border-radius:10px;background:var(--surface-2);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:3px;min-width:0;overflow:hidden}
+.cal-c.empty{background:none}
+.cal-c.fut{opacity:.45}
+.cal-c.today{outline:3px solid var(--primary);outline-offset:-3px}
+.cal-n{position:relative;z-index:2;font-size:.92rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+.cal-stamp{position:absolute;left:50%;top:64%;transform:translate(-50%,-50%) rotate(-12deg);width:56%;aspect-ratio:1;border-radius:50%;border:2.5px solid var(--gold);color:var(--gold);font-style:normal;font-weight:800;font-size:.5rem;letter-spacing:-.02em;display:grid;place-items:center;background:color-mix(in srgb,var(--gold-soft) 70%,transparent)}
+.cal-stamp.mini{position:static;transform:rotate(-12deg);width:28px;height:28px;font-size:.5rem;display:inline-grid;vertical-align:middle}
+.cal-dots{position:absolute;top:3px;right:4px;display:flex;flex-direction:column;gap:2px;z-index:2}
+.cal-dots b,.cal-leg .dot{display:inline-block;width:7px;height:7px;border-radius:50%}
+.cal-dots b.ankle,.cal-leg .dot.ankle{background:var(--ankle)}.cal-dots b.hip,.cal-leg .dot.hip{background:var(--hip)}.cal-dots b.step,.cal-leg .dot.step{background:var(--step)}
+.cal-leg{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:.85rem;color:var(--ink-2)}
+.cal-leg span{display:inline-flex;align-items:center;gap:4px}
+
+button.cal-c{border:0;font:inherit;color:inherit;cursor:pointer;width:100%}
+button.cal-c:disabled{cursor:default}
+.cal-c.sel{outline:3px solid var(--gold);outline-offset:-3px;background:var(--gold-soft)}
+.cal-detail{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.cal-hint{color:var(--ink-2);font-size:.98rem;text-align:center}
+.cd-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.cd-head h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.35rem}
+.cd-chips{display:flex;gap:6px;flex-wrap:wrap}
+.cal-detail .tag{font-size:.82rem;font-weight:800;border-radius:999px;padding:2px 10px;background:var(--surface-2);color:var(--ink-2)}
+.cal-detail .tag.gold{background:var(--gold-soft);color:var(--gold)}
+.cal-detail .tag.ok{background:var(--primary-soft);color:var(--primary)}
+.cal-detail .tag.no{background:var(--warn-soft);color:var(--warn)}
+.cd-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.cd-ex{border:1.5px solid var(--line);border-left-width:6px;border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:6px}
+.cd-ex.ankle{border-left-color:var(--ankle)}.cd-ex.hip{border-left-color:var(--hip)}.cd-ex.step{border-left-color:var(--step)}
+.cd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cd-top b{font-family:var(--f-display);font-weight:400;font-size:1.25rem}
+.cd-top>span:not(.tag){color:var(--ink-2);font-weight:700}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+@media (max-width:440px){.cd-grid{grid-template-columns:repeat(2,1fr)}}
+.cd-grid>div{background:var(--surface-2);border-radius:10px;padding:6px 8px;display:flex;flex-direction:column}
+.cd-grid span{font-size:.8rem;color:var(--ink-2);font-weight:700}
+.cd-grid b{font-size:1.05rem;font-variant-numeric:tabular-nums}
+.cd-stars{color:var(--gold);letter-spacing:1px}.cd-stars i{font-style:normal;color:var(--line)}
+.cd-ex small{color:var(--ink-2)}
+.cd-none{color:var(--ink-2);background:var(--surface-2);border-radius:12px;padding:12px;text-align:center}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
 
@@ -578,7 +684,7 @@ body.focus main{padding-bottom:32px}
 "use strict";
 /* ================= 저장소 ================= */
 const LS_KEY='barosegi.v1';
-const blank=()=>({ver:1,updatedAt:0,safety:null,surveys:[],levelChoice:null,sessions:[],points:0,ledger:[],coupons:[],weight:null,profile:null});
+const blank=()=>({ver:1,updatedAt:0,safety:null,surveys:[],levelChoice:null,sessions:[],points:0,ledger:[],coupons:[],weight:null,profile:null,loc:null,att:null});
 let state=blank();
 let saveMode='local'; // local | account
 let dbDoc=null, dbBlocked=false, saveTimer=null;
@@ -1229,17 +1335,113 @@ function weekCard(){
   <p class="small">${bonus?'이번 주 보너스 300P를 받았어요. 잘하셨어요!':`${3-n}번 더 하면 보너스 <b>300P</b>를 받아요.`}</p></section>`;
 }
 
+/* ---- 오늘의 날씨·미세먼지·옷차림 (Open-Meteo, 키 없이 무료) ---- */
+const CITIES=[['서울',37.566,126.978],['부산',35.180,129.075],['대구',35.871,128.601],['인천',37.456,126.705],['광주',35.160,126.851],['대전',36.350,127.385],['울산',35.538,129.311],['세종',36.480,127.289],['수원',37.263,127.029],['고양',37.658,126.832],['성남',37.420,127.127],['춘천',37.881,127.730],['강릉',37.751,128.876],['청주',36.642,127.489],['천안',36.815,127.114],['전주',35.824,127.148],['목포',34.812,126.392],['포항',36.019,129.343],['창원',35.228,128.681],['제주',33.499,126.531]];
+const WX_KEY='barosegi.wx';
+const WMO={0:['맑음','sun'],1:['대체로 맑음','sun'],2:['구름 조금','cloudsun'],3:['흐림','cloud'],45:['안개','fog'],48:['짙은 안개','fog'],51:['약한 이슬비','rain'],53:['이슬비','rain'],55:['강한 이슬비','rain'],56:['어는 이슬비','sleet'],57:['어는 이슬비','sleet'],61:['약한 비','rain'],63:['비','rain'],65:['강한 비','rain'],66:['어는 비','sleet'],67:['강한 어는 비','sleet'],71:['약한 눈','snow'],73:['눈','snow'],75:['많은 눈','snow'],77:['싸락눈','snow'],80:['소나기','rain'],81:['소나기','rain'],82:['강한 소나기','rain'],85:['눈 소나기','snow'],86:['강한 눈 소나기','snow'],95:['뇌우','storm'],96:['뇌우·우박','storm'],99:['강한 뇌우·우박','storm']};
+/* 환경부 미세먼지 예보 등급 */
+function pmGrade(v,fine){const c=fine?[15,35,75]:[30,80,150];return v==null?['-','none']:v<=c[0]?['좋음','good']:v<=c[1]?['보통','ok']:v<=c[2]?['나쁨','bad']:['매우 나쁨','worst']}
+const WX_ICON={
+  sun:'<circle cx="24" cy="24" r="9" fill="#F7B733"/><g stroke="#F7B733" stroke-width="3" stroke-linecap="round">'+[0,45,90,135,180,225,270,315].map(a=>{const r=a*Math.PI/180;return `<path d="M${(24+Math.cos(r)*14).toFixed(1)} ${(24+Math.sin(r)*14).toFixed(1)} L${(24+Math.cos(r)*19).toFixed(1)} ${(24+Math.sin(r)*19).toFixed(1)}"/>`}).join('')+'</g>',
+  cloudsun:'<circle cx="18" cy="18" r="8" fill="#F7B733"/><path d="M14 36 Q8 36 8 30 Q8 24 15 24 Q17 17 25 17 Q34 17 35 25 Q41 25 41 31 Q41 36 35 36 Z" fill="#DCE4EA" stroke="#9AAAB6" stroke-width="2"/>',
+  cloud:'<path d="M12 36 Q5 36 5 29 Q5 22 13 22 Q15 13 25 13 Q35 13 37 22 Q44 22 44 29 Q44 36 37 36 Z" fill="#DCE4EA" stroke="#9AAAB6" stroke-width="2"/>',
+  fog:'<path d="M8 18 H40 M5 25 H43 M9 32 H39 M13 39 H35" stroke="#9AAAB6" stroke-width="3.5" stroke-linecap="round"/>',
+  rain:'<path d="M12 28 Q5 28 5 21 Q5 14 13 14 Q15 6 25 6 Q35 6 37 14 Q44 14 44 21 Q44 28 37 28 Z" fill="#C9D6E2" stroke="#7F93A6" stroke-width="2"/><g stroke="#3D86C6" stroke-width="3" stroke-linecap="round"><path d="M15 33 L12 41"/><path d="M25 33 L22 41"/><path d="M35 33 L32 41"/></g>',
+  sleet:'<path d="M12 28 Q5 28 5 21 Q5 14 13 14 Q15 6 25 6 Q35 6 37 14 Q44 14 44 21 Q44 28 37 28 Z" fill="#C9D6E2" stroke="#7F93A6" stroke-width="2"/><path d="M15 33 L12 41" stroke="#3D86C6" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="38" r="2.6" fill="#9AB8D6"/><path d="M35 33 L32 41" stroke="#3D86C6" stroke-width="3" stroke-linecap="round"/>',
+  snow:'<path d="M12 28 Q5 28 5 21 Q5 14 13 14 Q15 6 25 6 Q35 6 37 14 Q44 14 44 21 Q44 28 37 28 Z" fill="#E3EAF0" stroke="#9AAAB6" stroke-width="2"/><g fill="#7FB0DA"><circle cx="14" cy="37" r="3"/><circle cx="25" cy="40" r="3"/><circle cx="36" cy="37" r="3"/></g>',
+  storm:'<path d="M12 28 Q5 28 5 21 Q5 14 13 14 Q15 6 25 6 Q35 6 37 14 Q44 14 44 21 Q44 28 37 28 Z" fill="#AEB9C4" stroke="#6E7E8C" stroke-width="2"/><path d="M26 28 L19 38 H25 L21 46 L32 34 H26 L30 28 Z" fill="#F7B733"/>'
+};
+const OUT_ICON={
+  tee:'<path d="M10 8 L16 4 Q20 8 24 4 L30 8 L34 15 L28 17 V36 H12 V17 L6 15 Z"/>',
+  long:'<path d="M12 6 L16 4 Q20 7 24 4 L28 6 L35 30 L30 31 L27 16 V36 H13 V16 L10 31 L5 30 Z"/>',
+  knit:'<path d="M12 6 L16 4 Q20 8 24 4 L28 6 L34 30 L29 31 L27 18 V36 H13 V18 L11 31 L6 30 Z"/><path d="M13 32 H27 M13 28 H27" />',
+  jacket:'<path d="M12 5 L17 4 L20 10 L23 4 L28 5 L34 30 L29 31 L27 17 V37 H13 V17 L11 31 L6 30 Z"/><path d="M20 10 V37"/>',
+  coat:'<path d="M12 4 L17 3 L20 9 L23 3 L28 4 L35 34 L30 35 L28 18 V38 H12 V18 L10 35 L5 34 Z"/><path d="M20 9 V38 M15 22 H17 M15 28 H17"/>',
+  padding:'<path d="M11 6 Q20 0 29 6 L35 32 L29 33 L28 20 V38 H12 V20 L11 33 L5 32 Z"/><path d="M12 14 H28 M12 22 H28 M12 30 H28"/>',
+  scarf:'<path d="M8 10 Q20 18 32 10 L32 16 Q20 24 8 16 Z"/><path d="M24 18 L26 34 L20 34 L19 20"/>',
+  gloves:'<path d="M10 34 V18 Q10 15 12 15 V9 Q12 7 14 7 Q16 7 16 9 V14 V7 Q16 5 18 5 Q20 5 20 7 V15 Q24 14 25 17 L23 25 Q22 34 18 34 Z"/>',
+  hat:'<path d="M6 26 Q20 30 34 26 Q34 22 28 22 Q28 10 20 10 Q12 10 12 22 Q6 22 6 26 Z"/>',
+  cap:'<path d="M8 24 Q8 10 20 10 Q32 10 32 24 Z"/><path d="M4 26 Q20 20 36 26 Q20 30 4 26 Z"/>',
+  umbrella:'<path d="M4 20 Q20 0 36 20 Q32 17 28 20 Q24 17 20 20 Q16 17 12 20 Q8 17 4 20 Z"/><path d="M20 20 V32 Q20 36 16 35"/>',
+  mask:'<path d="M8 14 Q20 10 32 14 L31 26 Q20 32 9 26 Z"/><path d="M8 16 Q3 18 6 24 M32 16 Q37 18 34 24 M12 18 H28 M12 22 H28"/>',
+  shoe:'<path d="M4 28 V18 Q4 15 7 15 H14 L20 22 Q30 22 34 26 V30 H4 Z"/><path d="M4 33 H34" stroke-dasharray="3 2"/>',
+  water:'<path d="M15 6 H25 V10 Q29 12 29 17 V36 H11 V17 Q11 12 15 10 Z"/><path d="M11 24 H29"/>',
+  cane:'<path d="M14 8 Q14 4 19 4 Q24 4 24 9 V36"/><path d="M20 36 H28"/>'
+};
+function outIcon(k){return `<svg viewBox="0 0 40 40" width="34" height="34" fill="var(--surface)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">${OUT_ICON[k]}</svg>`}
+function outfitFor(w){
+  const t=w.feels,items=[],gear=[],tips=[];const wet=/rain|sleet|snow|storm/.test(w.kind)||w.pop>=60;const icy=(w.kind==='snow'||w.kind==='sleet')||(w.tmin<=0&&wet);
+  if(t>=28){items.push(['tee','반팔·얇은 면 옷'],['cap','챙 넓은 모자'],['water','물병']);tips.push('한낮(12~17시)에는 외출을 피하고 그늘에서 자주 쉬세요.')}
+  else if(t>=23){items.push(['tee','반팔이나 얇은 긴팔'],['cap','모자'])}
+  else if(t>=20){items.push(['long','얇은 긴팔·긴바지'])}
+  else if(t>=17){items.push(['knit','얇은 니트·가디건'])}
+  else if(t>=12){items.push(['jacket','가벼운 자켓·가디건'],['long','긴바지'])}
+  else if(t>=9){items.push(['jacket','점퍼·트렌치코트'],['knit','얇은 내복'])}
+  else if(t>=5){items.push(['coat','코트·도톰한 점퍼'],['knit','내복'],['scarf','목도리'])}
+  else{items.push(['padding','두꺼운 패딩'],['hat','털모자'],['gloves','장갑'],['scarf','목도리']);tips.push('얇은 옷을 여러 겹 겹쳐 입어야 체온 유지에 좋아요.')}
+  if(wet||icy)gear.push(['shoe','미끄럼 방지 신발']);
+  if(wet)gear.push(['umbrella','우산']);
+  if(icy){gear.push(['cane','지팡이']);tips.unshift('길이 얼어 미끄러워요. 걸음을 작게, 천천히 걸으세요.')}
+  if(w.pm.bad)gear.unshift(['mask','KF94 마스크']);
+  if(w.wind>=9)tips.push('바람이 강해요. 바람막이를 챙기고 몸이 휘청이지 않게 조심하세요.');
+  if(w.uv>=6&&t>=15)tips.push('자외선이 강해요. 모자와 선글라스를 챙기세요.');
+  if(wet&&!icy)tips.push('젖은 바닥·계단·맨홀 뚜껑은 미끄러워요. 손잡이를 잡고 다니세요.');
+  const indoor=w.pm.bad||icy||/storm/.test(w.kind)||t>=33||t<=-5;
+  return{items,gear,tips,indoor};
+}
+function wxCache(){try{const c=JSON.parse(localStorage.getItem(WX_KEY)||'null');return c}catch(e){return null}}
+function wxSave(c){try{localStorage.setItem(WX_KEY,JSON.stringify(c))}catch(e){}}
+async function fetchWx(loc){
+  const q=`latitude=${loc.lat}&longitude=${loc.lon}&timezone=Asia%2FSeoul`;
+  const to=ms=>{const c=new AbortController();setTimeout(()=>c.abort(),ms);return c.signal};
+  const [a,b]=await Promise.all([
+    fetch(`https://api.open-meteo.com/v1/forecast?${q}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,uv_index_max&forecast_days=1&wind_speed_unit=ms`,{signal:to(8000)}).then(r=>{if(!r.ok)throw 0;return r.json()}),
+    fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?${q}&current=pm10,pm2_5`,{signal:to(8000)}).then(r=>r.ok?r.json():null).catch(()=>null)]);
+  const cur=a.current||{},d=a.daily||{},code=cur.weather_code,wm=WMO[code]||['-','cloud'];
+  const pm10=b&&b.current?b.current.pm10:null,pm25=b&&b.current?b.current.pm2_5:null;
+  const g10=pmGrade(pm10,false),g25=pmGrade(pm25,true);
+  return{at:Date.now(),loc,temp:cur.temperature_2m,feels:cur.apparent_temperature,hum:cur.relative_humidity_2m,wind:cur.wind_speed_10m||0,desc:wm[0],kind:wm[1],
+    tmax:(d.temperature_2m_max||[])[0],tmin:(d.temperature_2m_min||[])[0],pop:(d.precipitation_probability_max||[])[0]||0,uv:(d.uv_index_max||[])[0]||0,
+    pm:{pm10,pm25,g10,g25,bad:/bad|worst/.test(g10[1]+g25[1])}};
+}
+function wxLoc(){return state.loc||{name:'서울',lat:37.566,lon:126.978}}
+function wxCardShell(){return `<section class="card wx" id="wxCard" aria-live="polite"><div class="wx-load">오늘 날씨를 불러오는 중…</div></section>`}
+function renderWx(w){
+  const el=$('#wxCard');if(!el)return;
+  const o=outfitFor(w),r=v=>v==null?'-':Math.round(v);
+  const d=new Date();const dstr=`${d.getMonth()+1}월 ${d.getDate()}일 ${'일월화수목금토'[d.getDay()]}요일`;
+  el.innerHTML=`<div class="wx-top"><div><span class="eyebrow">${dstr} · <button class="linkbtn" type="button" data-wxloc="1">${esc(w.loc.name)} ▾</button></span>
+      <div class="wx-now"><svg viewBox="0 0 48 48" width="64" height="64" aria-hidden="true">${WX_ICON[w.kind]||WX_ICON.cloud}</svg><div><b class="wx-t">${r(w.temp)}°</b><span>${w.desc} · 체감 ${r(w.feels)}°</span></div></div></div>
+    <div class="wx-side"><span>최고 <b>${r(w.tmax)}°</b> / 최저 <b>${r(w.tmin)}°</b></span><span>비 올 확률 <b>${r(w.pop)}%</b></span><span>바람 <b>${(w.wind||0).toFixed(1)}m/s</b></span></div></div>
+   <div class="wx-pm"><div class="pm ${w.pm.g10[1]}"><span>미세먼지</span><b>${w.pm.g10[0]}</b><small>${w.pm.pm10==null?'':r(w.pm.pm10)+'㎍/㎥'}</small></div><div class="pm ${w.pm.g25[1]}"><span>초미세먼지</span><b>${w.pm.g25[0]}</b><small>${w.pm.pm25==null?'':r(w.pm.pm25)+'㎍/㎥'}</small></div><div class="pm uv"><span>자외선</span><b>${w.uv>=8?'매우 높음':w.uv>=6?'높음':w.uv>=3?'보통':'낮음'}</b><small>지수 ${r(w.uv)}</small></div></div>
+   <div class="wx-out"><h3>오늘의 외출 옷차림</h3><div class="outfit">${o.items.map(([k,t])=>`<div class="oi">${outIcon(k)}<span>${t}</span></div>`).join('')}</div>
+    ${o.gear.length?`<h4 class="gear-h">꼭 챙기세요</h4><div class="outfit gear">${o.gear.map(([k,t])=>`<div class="oi">${outIcon(k)}<span>${t}</span></div>`).join('')}</div>`:''}
+    ${o.tips.length?`<ul class="wx-tips">${o.tips.map(t=>`<li>${t}</li>`).join('')}</ul>`:''}
+    <div class="wx-adv ${o.indoor?'in':'out'}"><b>${o.indoor?'오늘은 실내 운동을 추천해요':'가벼운 산책도 좋은 날이에요'}</b><span>${o.indoor?'날씨나 공기가 좋지 않아요. 집에서 바로서기 운동을 해 보세요.':'오전 10시~오후 4시 사이, 평평하고 밝은 길로 걸으세요.'}</span></div></div>
+   <p class="wx-src">기상 정보: Open-Meteo · 미세먼지 등급: 환경부 기준 · ${new Date(w.at).getHours()}시 ${String(new Date(w.at).getMinutes()).padStart(2,'0')}분 업데이트</p>`;
+}
+async function loadWx(force){
+  const loc=wxLoc(),c=wxCache();
+  if(!force&&c&&c.loc&&c.loc.name===loc.name&&Date.now()-c.at<30*60*1000){renderWx(c);return}
+  if(c&&c.loc&&c.loc.name===loc.name)renderWx(c);
+  try{const w=await fetchWx(loc);wxSave(w);renderWx(w)}
+  catch(e){const el=$('#wxCard');if(el&&!(c&&c.loc&&c.loc.name===loc.name))el.innerHTML=`<div class="wx-off"><b>오늘 날씨</b><span>${(()=>{let f=false;try{f=window.self!==window.top}catch(x){f=true}return f})()?'이 미리보기 화면(claude.ai)에서는 외부 날씨 정보를 불러올 수 없어요. 배포한 웹 주소(GitHub)에서는 실시간 날씨·미세먼지가 보여요.':'날씨 정보를 불러오지 못했어요. 인터넷 연결을 확인해 주세요.'}</span><button class="btn ghost pl-mini" type="button" data-wxretry="1">다시 불러오기</button></div>`}
+}
+function openLocPicker(){
+  openModal(`<h2>지역 선택</h2><p class="small muted">날씨와 미세먼지를 볼 지역을 골라 주세요.</p><button class="btn soft block" type="button" data-wxgeo="1">내 위치 사용하기</button><div class="city-grid">${CITIES.map(([n],i)=>`<button type="button" class="seg" data-city="${i}" aria-pressed="${wxLoc().name===n}">${n}</button>`).join('')}</div><button class="btn ghost" type="button" data-close>닫기</button>`);
+}
 function viewHome(){
   const lv=curLevel();const d=weekDone();const next=['ankle','hip','step'].find(k=>!d.has(k));const L=lv||1;
-  return `<section class="hero home-hero"><span class="eyebrow">집에서 하는 낙상 예방 운동</span><h1>넘어지지 않는 몸,<br>발목·고관절·디딤으로</h1></section>
+  return `${wxCardShell()}<section class="hero home-hero"><span class="eyebrow">집에서 하는 낙상 예방 운동</span><h1>넘어지지 않는 몸,<br>발목·고관절·디딤으로</h1></section>
   ${!lastSurvey()?`<section class="card start-card"><span class="eyebrow">시작하기</span><h2>설문으로 내 운동 수준을 찾아요</h2><p class="muted">1분 영상을 보고 10문항에 답하면 초급·중급·상급 운동이 정해져요.</p><a class="btn block" href="#survey">설문 시작하기</a></section>`
   :`<section class="card today-card ${next||'ankle'}"><span class="eyebrow">오늘의 운동 · ${LV_NAME[lv]}</span><h2>${next?DAYS[next].name:'이번 주 3회를 모두 마쳤어요!'}</h2><p class="muted">${next?`${DAYS[next].n}회차 · 하루 ${LV_EASY[L].time}`:'추가로 운동해도 좋아요. 포인트는 하루 1회 드려요.'}</p><a class="btn block" href="#session-${next||'ankle'}">${next?'▶ 따라하기 시작':'발목 전략 한 번 더'}</a></section>`}
+  ${attCard()}
   ${lastSurvey()?weekCard():''}
   <section class="card"><div class="row" style="justify-content:space-between"><h3>주 3회 운동 프로그램</h3><a class="small" href="#program">자세히 보기</a></div>
    <div class="home-days">${['ankle','hip','step'].map(k=>{const D=DAYS[k],done=weekDone().has(k);return `<a class="hday ${k}${done?' done':''}" href="#session-${k}"><span class="hday-n">${D.n}</span><span class="hday-t"><b>${D.name}</b><small>${D.dayHint} 추천 · ${D.main.length+4}개 동작</small></span><span class="hday-go">${done?'완료':'▶'}</span></a>`}).join('')}</div></section>
   <p class="foot-note">상명대학교 캡스톤디자인 수업 프로젝트로 만든 운동 안내 도구이며, 의학적 진단이나 치료를 대신하지 않습니다. <a href="#evidence">근거 자료</a></p>`;
 }
-function afterHome(){}
+function afterHome(){loadWx(false)}
 
 /* ---- 설문 ---- */
 let sv=null;
@@ -2230,10 +2432,55 @@ function openProfile(){
     if(bad){err.textContent=bad;err.hidden=false;return}
     state.profile={name:$('#pName').value.trim().slice(0,12),sex,age,height:Math.round(h*10)/10};state.weight=Math.round(w*10)/10;save();closeModal();route()});
 }
+
+/* ---- 출석 달력 ---- */
+let calYM=null,calSel=null;
+function attDaySet(){
+  const set=new Set((state.att&&state.att.days)||[]);
+  state.ledger.forEach(l=>{if(/^출석 체크/.test(l.reason||''))set.add(ymd(l.date))});
+  if(state.att&&state.att.last)set.add(state.att.last);
+  return set;
+}
+function longestStreak(set){const ds=[...set].sort();let best=0,cur=0,prev=null;ds.forEach(d=>{if(prev){const p=new Date(prev);p.setDate(p.getDate()+1);cur=ymd(p)===d?cur+1:1}else cur=1;best=Math.max(best,cur);prev=d});return best}
+function calHTML(){
+  const now=new Date();if(!calYM)calYM=[now.getFullYear(),now.getMonth()];
+  const [y,m]=calYM,first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),lead=first.getDay(),td=today();
+  const att=attDaySet(),ex={};state.sessions.forEach(s=>{(ex[s.date]=ex[s.date]||[]).push(s.day)});
+  const pre=`${y}-${String(m+1).padStart(2,'0')}-`;const monthAtt=[...att].filter(d=>d.startsWith(pre)).length;const monthEx=Object.keys(ex).filter(d=>d.startsWith(pre)).length;
+  const cells=[];for(let i=0;i<lead;i++)cells.push('<div class="cal-c empty"></div>');
+  for(let d=1;d<=days;d++){const key=pre+String(d).padStart(2,'0'),on=att.has(key),fut=key>td,dow=(lead+d-1)%7;
+    cells.push(`<button type="button" ${fut?'disabled':''} data-calday="${key}" class="cal-c${on?' on':''}${key===td?' today':''}${fut?' fut':''}${dow===0?' sun':dow===6?' sat':''}${key===calSel?' sel':''}" aria-label="${m+1}월 ${d}일${on?' 출석':''}${ex[key]?' 운동 '+ex[key].length+'회':''}" aria-pressed="${key===calSel}"><span class="cal-n">${d}</span>${on?'<i class="cal-stamp" aria-hidden="true">출석</i>':''}${ex[key]?`<span class="cal-dots">${[...new Set(ex[key])].map(k=>`<b class="${k}"></b>`).join('')}</span>`:''}</button>`)}
+  const isNow=y===now.getFullYear()&&m===now.getMonth();
+  return `<div class="cal-head"><button type="button" class="cal-nav" data-calnav="-1" aria-label="이전 달">‹</button><b>${y}년 ${m+1}월</b><button type="button" class="cal-nav" data-calnav="1" aria-label="다음 달" ${isNow?'disabled':''}>›</button></div>
+   <div class="cal-sum"><span>이번 달 출석 <b>${monthAtt}</b>일</span><span>운동 <b>${monthEx}</b>일</span></div>
+   <div class="cal-grid">${['일','월','화','수','목','금','토'].map((w,i)=>`<div class="cal-w${i===0?' sun':i===6?' sat':''}">${w}</div>`).join('')}${cells.join('')}</div>
+   <div class="cal-leg"><span><i class="cal-stamp mini">출석</i> 출석한 날</span><span><b class="dot ankle"></b>발목</span><span><b class="dot hip"></b>고관절</span><span><b class="dot step"></b>디딤</span></div>`;
+}
+
+function calDetailHTML(key){
+  if(!key)return `<p class="cal-hint">날짜를 누르면 그날의 운동 기록을 볼 수 있어요.</p>`;
+  const d=new Date(key+'T00:00:00'),title=`${d.getMonth()+1}월 ${d.getDate()}일 ${'일월화수목금토'[d.getDay()]}요일`;
+  const ss=state.sessions.filter(x=>x.date===key),att=attDaySet().has(key);
+  const pts=state.ledger.filter(l=>ymd(l.date)===key).reduce((a,l)=>a+l.delta,0);
+  const sv=state.surveys.filter(x=>ymd(x.date)===key);
+  const proofTxt=x=>x.proof==='video'?'<span class="tag ok">영상 인증</span>':x.proof==='cam'?'<span class="tag ok">카메라 인증</span>':x.proof==='photo'?'<span class="tag ok">사진 인증</span>':x.proof==='none'?'<span class="tag no">미인증</span>':'';
+  const body=ss.length?ss.map(x=>`<li class="cd-ex ${x.day}"><div class="cd-top"><b>${DAYS[x.day].name}</b><span>${LV_NAME[x.level]}</span>${proofTxt(x)}</div>
+     <div class="cd-grid"><div><span>운동 시간</span><b>${x.sec?fmtDur(x.sec):x.min+'분'}</b></div><div><span>칼로리</span><b>${x.kcal!=null?x.kcal+' kcal':'-'}</b></div><div><span>힘든 정도</span><b class="cd-stars">${x.rpe?'★'.repeat(x.rpe)+'<i>'+'★'.repeat(5-x.rpe)+'</i>':'-'}</b></div><div><span>포인트</span><b>${x.points?'+'+x.points+'P':'0P'}</b></div></div>
+     ${x.rpe?`<small>${RPE_TXT[x.rpe]}</small>`:''}</li>`).join(''):`<li class="cd-none">이 날은 운동 기록이 없어요.</li>`;
+  return `<div class="cd-head"><h4>${title}</h4><div class="cd-chips">${att?'<span class="tag gold">출석</span>':'<span class="tag">출석 안 함</span>'}${pts?`<span class="tag gold">받은 포인트 ${pts>0?'+':''}${pts}P</span>`:''}</div></div>
+   <ul class="cd-list">${body}</ul>${sv.length?`<p class="small muted">이 날 설문을 했어요: ${sv.map(x=>`${x.total}점 · ${LV_NAME[x.level]}`).join(', ')}</p>`:''}`;
+}
+function attCalCard(){
+  const set=attDaySet(),a=state.att;
+  return `<section class="card"><div class="row" style="justify-content:space-between"><h3>출석 달력</h3></div>
+   <div class="cal-stats"><div><span>지금 연속</span><b>${a&&a.last&&(a.last===today()||a.last===ymdOffset(-1))?a.streak:0}<small>일</small></b></div><div><span>최장 연속</span><b>${longestStreak(set)}<small>일</small></b></div><div><span>총 출석</span><b>${set.size}<small>일</small></b></div></div>
+   <div id="attCal">${calHTML()}</div><div id="calDetail" class="cal-detail" aria-live="polite">${calDetailHTML(calSel)}</div></section>`;
+}
 function viewMy(){
   const n=state.sessions.length,wks=new Set(state.ledger.filter(l=>l.bonusWeek).map(l=>l.bonusWeek)).size;
   return `<section class="hero"><span class="eyebrow">내 기록</span><h1>${state.profile&&state.profile.name?esc(state.profile.name)+' 님, ':''}꾸준함이 쌓이고 있어요</h1></section>
   ${profileCard()}
+  ${attCalCard()}
   <section class="card"><div class="grid3"><div class="stat"><span class="small muted">보유 포인트</span><b style="color:var(--gold)">${state.points.toLocaleString('ko-KR')}P</b></div><div class="stat"><span class="small muted">운동 횟수</span><b>${n}회</b></div><div class="stat"><span class="small muted">주 3회 달성</span><b>${wks}주</b></div></div>
    <p class="small muted">${saveMode==='account'?'기록이 내 계정에 저장되어 다른 기기에서도 이어집니다.':'기록은 이 기기의 브라우저에 저장됩니다. 브라우저 데이터를 지우면 기록이 사라질 수 있어요.'}</p></section>
   ${state.coupons.length?`<section class="card"><h3>내 교환권</h3>${state.coupons.slice().reverse().map(c=>`<div class="coupon"><span><b>${c.name}</b><br><span class="small muted">${fmtDate(c.date)} 교환 · 모의 교환권</span></span><code>${c.code}</code></div>`).join('')}</section>`:''}
@@ -2288,6 +2535,11 @@ function viewEvidence(){
 function openModal(html){const m=$('#modal');m.innerHTML=`<div class="modal-box" role="dialog" aria-modal="true">${html}</div>`;m.hidden=false;const f=m.querySelector('button,a');if(f)f.focus()}
 function closeModal(){const m=$('#modal');m.hidden=true;m.innerHTML=''}
 $('#modal').addEventListener('click',e=>{if(e.target.closest('[data-userec]')){closeModal();if(PL)PL.setMode('rec');return}
+  const cy=e.target.closest('[data-city]');if(cy){const c=CITIES[+cy.dataset.city];state.loc={name:c[0],lat:c[1],lon:c[2]};save();closeModal();loadWx(true);return}
+  if(e.target.closest('[data-wxgeo]')){const b=e.target.closest('[data-wxgeo]');b.textContent='위치를 확인하는 중…';
+    if(!navigator.geolocation){b.textContent='이 기기에서는 위치를 쓸 수 없어요';return}
+    navigator.geolocation.getCurrentPosition(pos=>{state.loc={name:'내 위치',lat:+pos.coords.latitude.toFixed(3),lon:+pos.coords.longitude.toFixed(3)};save();closeModal();loadWx(true)},
+      ()=>{b.textContent='위치를 쓸 수 없어요. 아래에서 지역을 골라 주세요.'},{timeout:10000,maximumAge:600000});return}
   const st=e.target.closest('[data-star]');if(st){const n=+st.dataset.star,box=st.closest('.rpe'),i=+box.dataset.sidx;if(state.sessions[i]){state.sessions[i].rpe=n;save()}
     box.querySelectorAll('.star').forEach(b=>{const on=+b.dataset.star<=n;b.classList.toggle('on',on);b.setAttribute('aria-checked',+b.dataset.star===n)});
     const lv=state.sessions[i]?state.sessions[i].level:1;$('#rpeTxt').innerHTML=`<b>${RPE_TXT[n]}</b><br>${rpeAdvice(n,lv)}`;return}
@@ -2296,7 +2548,7 @@ $('#modal').addEventListener('click',e=>{if(e.target.closest('[data-userec]')){c
     state.weight=Math.round(kg*2)/2;const i=+ws.dataset.wsave,ss=state.sessions[i];if(ss){ss.kcal=kcalOf(ss.level,ss.sec||ss.min*60,state.weight)}save();
     $('#kcalV').innerHTML=`${ss?ss.kcal:0}<small>kcal</small>`;$('#wV').textContent=state.weight;$('#wBox').hidden=true;return}const c=e.target.closest('[data-close]');if(e.target.id==='modal'||c){e.preventDefault();const href=c&&c.getAttribute('href');closeModal();if(href&&href.startsWith('#'))location.hash=href.slice(1)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#modal').hidden)closeModal()});
-$('#view').addEventListener('click',e=>{if(e.target.closest('[data-prof]'))openProfile()});
+$('#view').addEventListener('click',e=>{if(e.target.closest('[data-prof]'))openProfile();else if(e.target.closest('[data-wxloc]'))openLocPicker();else if(e.target.closest('[data-wxretry]'))loadWx(true);else if(e.target.closest('[data-calday]')){const k=e.target.closest('[data-calday]').dataset.calday;calSel=calSel===k?null:k;document.querySelectorAll('[data-calday]').forEach(b=>{const on=b.dataset.calday===calSel;b.classList.toggle('sel',on);b.setAttribute('aria-pressed',on)});const dt=$('#calDetail');if(dt){dt.innerHTML=calDetailHTML(calSel);if(calSel)dt.scrollIntoView({block:'nearest',behavior:'smooth'})}}else{const cn=e.target.closest('[data-calnav]');if(cn&&!cn.disabled){calYM=calYM||[new Date().getFullYear(),new Date().getMonth()];let [y,m]=calYM;m+=+cn.dataset.calnav;if(m<0){m=11;y--}if(m>11){m=0;y++}calYM=[y,m];const c=$('#attCal');if(c)c.innerHTML=calHTML()}}});
 
 function route(){
   killFigs();if(shortCtl){shortCtl.stop();shortCtl=null}clearInterval(tmrId);if(PL){PL.destroy();PL=null}
@@ -2312,8 +2564,30 @@ function route(){
 }
 let lastHash=location.hash;
 window.addEventListener('hashchange',()=>{const a=lastHash.split('-')[0],b=location.hash.split('-')[0];lastHash=location.hash;route();if(a!==b)window.scrollTo(0,0)});
+/* ---- 출석 체크: 매일 첫 접속 10P, 7일 연속마다 50P, 하루라도 빠지면 1일차부터 ---- */
+const ATT_DAY=10,ATT_WEEK=50;
+function ymdOffset(n){const d=new Date();d.setDate(d.getDate()+n);return ymd(d)}
+function attStamps(a,big){const pos=a&&a.streak?((a.streak-1)%7)+1:0;
+  return `<div class="att-row${big?' big':''}">${[1,2,3,4,5,6,7].map(i=>`<div class="att-d${i<=pos?' on':''}${i===pos&&big?' now':''}${i===7?' gift':''}"><span class="att-c">${i<=pos?'✓':i===7?'+'+ATT_WEEK:i}</span><small>${i}일</small></div>`).join('')}</div>`}
+function attCard(){const a=state.att;if(!a||!a.last)return '';const doneToday=a.last===today();const pos=((a.streak-1)%7)+1;
+  return `<section class="card att-card"><div class="row" style="justify-content:space-between"><h3>출석 체크</h3><span class="att-badge">${doneToday?'오늘 출석 완료':'오늘 아직 출석 전'}</span></div>
+   ${attStamps(a,false)}<p class="small muted">${a.streak}일 연속 출석 중 · ${pos===7?'오늘 보너스를 받았어요!':`${7-pos}일 더 오면 보너스 ${ATT_WEEK}P`} · 매일 ${ATT_DAY}P</p></section>`}
+function checkAttendance(){
+  const td=today(),a=Object.assign({last:null,streak:0,total:0},state.att||{});
+  if(a.last===td)return;
+  const broke=!!a.last&&a.last!==ymdOffset(-1);
+  a.streak=a.last===ymdOffset(-1)?a.streak+1:1;a.last=td;a.total=(a.total||0)+1;a.days=(a.days||[]).concat(td).slice(-500);
+  const bonus=a.streak%7===0?ATT_WEEK:0;
+  state.points+=ATT_DAY;state.ledger.push({date:new Date().toISOString(),delta:ATT_DAY,reason:`출석 체크 (${a.streak}일 연속)`});
+  if(bonus){state.points+=bonus;state.ledger.push({date:new Date().toISOString(),delta:bonus,reason:`${a.streak}일 연속 출석 보너스`})}
+  state.att=a;save();
+  const pos=((a.streak-1)%7)+1;
+  const msg=bonus?`<div class="notice info"><b>${a.streak}일 연속 출석!</b> 보너스 ${ATT_WEEK}P를 드려요.</div>`:broke?`<p class="muted">연속 출석이 끊겨서 <b>1일차</b>부터 다시 시작해요. 내일도 와 주세요!</p>`:`<p class="muted"><b>${7-pos}일</b> 더 연속으로 오시면 보너스 <b>${ATT_WEEK}P</b>를 드려요.</p>`;
+  openModal(`<div class="att-modal"><span class="eyebrow">출석 체크 · ${a.streak}일 연속</span><div class="burst">+${ATT_DAY+bonus}P</div><h2>${state.profile&&state.profile.name?esc(state.profile.name)+' 님, ':''}오늘도 오셨네요!</h2>${attStamps(a,true)}${msg}<button class="btn block" type="button" data-close>확인</button></div>`);
+  if(['','#home','#my'].includes(location.hash))route();
+}
 route();
-initDb();
+initDb().finally(()=>{try{checkAttendance()}catch(e){}});
 })();
 </script>
 </body></html>
